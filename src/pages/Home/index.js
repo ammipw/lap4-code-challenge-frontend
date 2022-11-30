@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import axios from "axios"
-
-
+import './style.css'
 
 export default function Home() {
 
@@ -27,12 +26,16 @@ export default function Home() {
     }
 
     return (
-    <div>
-        <form onSubmit={handleSubmit}>
-            <input type="text" name="long_url" onChange={handleChange}/>
-            <input type="submit" value="Submit"/>
-        </form>
-        <p>Short url: <a href={shortUrl}>{shortUrl}</a></p>
+    <div className='Home'>
+        <div className='content'>
+            <h1>YooRL</h1>
+            <p>URL shortener</p>
+            <form onSubmit={handleSubmit}>
+                <input type="text" name="long_url" onChange={handleChange}/>
+                <input type="submit" value="Submit"/>
+            </form>
+            <p>Short url: <a href={shortUrl}>{shortUrl}</a></p>
+        </div>
     </div>
     )
 }
