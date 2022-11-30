@@ -11,7 +11,7 @@ export default function Redirect() {
 
     const getLongUrl = async (url) => {
         try {
-            const urldata = await axios.get(`http://127.0.0.1:8000/urls/${url}`)
+            const urldata = await axios.get(`https://brendangeoghegan.pythonanywhere.com/urls/${url}`)
             console.log(urldata);
             if(urldata.data.fields.long_url)
             window.location.assign(urldata.data.fields.long_url)
