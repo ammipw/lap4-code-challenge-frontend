@@ -12,7 +12,7 @@ export default function Home() {
     // }, [shortUrl])
 
     const getShortUrl = async (url) => {
-        const urldata = await axios.post('http://127.0.0.1:8000/urls/create/', {long_url: url})
+        const urldata = await axios.post('https://brendangeoghegan.pythonanywhere.com/urls/create/', {long_url: url})
         setShortUrl(urldata.data.fields.short_url)
     }
 
