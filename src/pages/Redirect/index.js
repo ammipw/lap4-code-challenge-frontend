@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import axios from "axios"
+import ReactLoading from "react-loading"
+import './style.css'
 
 export default function Redirect() {
 
@@ -23,6 +25,8 @@ export default function Redirect() {
     }, [])
 
     return (
-    <div>Redirect</div>
+    <div className='Redirect'>
+        <ReactLoading type='spin' color='#0098df' height={100} width={100} />
+    </div>
     )
 }
