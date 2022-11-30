@@ -31,7 +31,7 @@ export default function Home() {
             <h1>YooRL</h1>
             <p>URL shortener</p>
             <form onSubmit={handleSubmit}>
-                <input type="text" name="long_url" onChange={handleChange}/>
+                <input type="text" name="long_url" onChange={handleChange} required/>
                 <input type="submit" value="Submit"/>
             </form>
             <p>Short url: <a href={shortUrl}>{shortUrl}</a></p>
